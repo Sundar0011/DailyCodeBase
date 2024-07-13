@@ -1,0 +1,25 @@
+import java.util.*;
+class main
+{
+  public static void main(String args[])
+  {
+    Scanner sc=new Scanner(System.in);
+    long e,c=0;
+    long n=sc.nextLong();
+    long f=1;
+    for(long i=1;i<=n;i++)
+    {
+      f*=i;
+    }
+    e=f%10;  
+    f/=10;
+    
+    while(e==0)
+    {
+      c++;
+      e=f%10;
+      f/=10;
+    }
+    System.out.println(c);
+  }
+}
