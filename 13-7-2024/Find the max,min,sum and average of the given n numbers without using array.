@@ -1,0 +1,25 @@
+import java.util.*;
+class main
+{
+  public static void main(String args[])
+  {
+    Scanner sc=new Scanner(System.in);
+    int min=10000000,max=-11000000,c=0,sum=0,n=0;
+    float avg;
+    while(n!=-1)
+    {
+      n=sc.nextInt();
+      if(n!=-1)
+      {
+        if(max<n)
+          max=n;
+        if(min>n)
+          min=n;
+        sum+=n;
+        c++;
+      }
+    }
+    avg=(float)sum/(float)c;
+    System.out.printf("Min = %d\nMax = %d\nSum = %d\nAverage = %f",min,max,sum,avg);
+  }
+}
