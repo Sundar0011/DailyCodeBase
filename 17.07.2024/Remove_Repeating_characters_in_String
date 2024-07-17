@@ -1,0 +1,25 @@
+package com.java;
+
+import java.util.Scanner;
+
+public class Remove_Dublicate_Form_String {
+	  public static void main(String[] args) {
+	        Scanner sc=new Scanner(System.in);
+	        String s=sc.nextLine();
+	        String n_repeat="";
+	        String repeat="";
+	        for(int i=0;i<s.length();i++)
+	        {
+	          String c=s.charAt(i)+"";
+	          String sub=s.substring(i+1,s.length());
+	          if(sub.contains(c)||repeat.contains(c))
+	          {
+	              repeat+=c;
+	          }
+	          else{
+	              n_repeat+=c;
+	          }
+	        }
+	        System.out.println(n_repeat);
+	 }
+}
