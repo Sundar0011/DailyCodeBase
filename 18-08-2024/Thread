@@ -1,0 +1,51 @@
+package thread;
+class Numbers extends Thread{
+
+	@Override
+	public void run() {
+		for(int i=0;i<=4;i++) {
+			System.out.print(i+" ");
+			try {
+				Thread.sleep(1000);
+			}
+			catch(Exception e) {
+				System.out.print("Not sleep");
+			}
+		}
+	}
+}
+class Letters extends Thread{
+	@Override
+	public void run() {
+		for(int i='a';i<'e';i++) {
+			System.out.print((char)i+" ");
+			try {
+				Thread.sleep(1000);
+			}
+			catch(Exception e) {
+				System.out.println("");
+			}
+		}
+	}
+}
+class Letter extends Thread{
+	
+}
+public class Intro {
+
+	public static void main(String[] args) {
+	Letters l=new Letters();
+	Numbers n=new Numbers();
+	n.start();
+	l.start();
+	try {
+		n.join();
+		l.join();
+	}
+	catch(Exception e) {
+		
+	}
+	
+	}
+
+}
